@@ -694,7 +694,7 @@ body {
 
 .page-header {
     background: linear-gradient(120deg, #3D1361 0%, #4D1979 25%, #6B2FA0 50%, #4D1979 75%, #3D1361 100%);
-    padding: var(--spacing-2xl) var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-lg);
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -730,18 +730,19 @@ body {
 }
 
 .page-title {
-    font-size: var(--font-size-3xl);
+    font-size: 32px;
     font-weight: var(--font-weight-medium);
     color: #FFFFFF;
-    line-height: 57px;
-    margin-bottom: var(--spacing-sm);
-    letter-spacing: -1.5px;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: -1px;
 }
 
 .page-subtitle {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     color: rgba(255, 255, 255, 0.9);
     letter-spacing: 0.3px;
+    margin: 0;
 }
 
 /* ============================================
@@ -832,6 +833,22 @@ body {
 
 .reflection-text p:last-child {
     margin-bottom: 0;
+}
+
+/* ============================================
+   PDF VIEWER
+   ============================================ */
+
+.pdf-viewer {
+    width: 100%;
+    min-height: 800px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.pdf-viewer embed {
+    border-radius: var(--radius-md);
 }
 
 /* ============================================
