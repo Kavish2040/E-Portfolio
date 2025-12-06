@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Posts - Kavish Soningra</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleAccordion(index) {
+            const accordions = document.querySelectorAll('.discussion-accordion');
+            const clickedAccordion = accordions[index];
+            const content = clickedAccordion.querySelector('.accordion-content');
+            const icon = clickedAccordion.querySelector('.accordion-icon');
+            const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+            
+            // Close all accordions
+            accordions.forEach((acc, i) => {
+                const accContent = acc.querySelector('.accordion-content');
+                const accIcon = acc.querySelector('.accordion-icon');
+                const accHeader = acc.querySelector('.accordion-header');
+                
+                if (i !== index) {
+                    accContent.style.maxHeight = '0px';
+                    accIcon.textContent = '+';
+                    accHeader.classList.remove('active');
+                }
+            });
+            
+            // Toggle clicked accordion
+            if (isOpen) {
+                content.style.maxHeight = '0px';
+                icon.textContent = '+';
+                clickedAccordion.querySelector('.accordion-header').classList.remove('active');
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.textContent = '−';
+                clickedAccordion.querySelector('.accordion-header').classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Kavish Soningra's E-Portfolio</div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="discourse-community.html" class="nav-link">Discourse Community</a></li>
+                <li class="nav-item"><a href="rhetorical-analysis.html" class="nav-link">Rhetorical Analysis</a></li>
+                <li class="nav-item"><a href="discussions.html" class="nav-link active">Discussions</a></li>
+                <li class="nav-item"><a href="reflection.html" class="nav-link">Reflection</a></li>
+                <li class="nav-item"><a href="fair-use.html" class="nav-link">Fair Use</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-header">
+            <div class="page-header-content">
+                <h1 class="page-title">Discussion Posts</h1>
+            </div>
+        </section>
+
+        <section class="assignments-section">
+            <div class="assignments-container">
+                <div class="assignment-card">
+                    <div class="assignment-header">
+                        <h3 class="assignment-title">Course Discussions</h3>
+                    </div>
+                    <div class="assignment-content">
+                        <div class="discussion-accordion">
+                            <button class="accordion-header" onclick="toggleAccordion(0)">
+                                <span class="accordion-title">Understanding Modes of Communication</span>
+                                <span class="accordion-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="discussion-text">
+                                <p>In Chapter 5 of Multimodality, Kress talks about what a "mode" really is, basically, it's any resource we use to convey meaning, whether that's writing, speaking, images, gestures, or even how we layout information. He argues that language isn't necessarily the only, or even the most effective, way to communicate. Each mode has its own strengths and weaknesses, shaped by culture and usage. For instance, writing unfolds in a linear way with words, while images depend on spatial arrangements.</p>
+                                
+                                <p>What really struck me is that different modes don't just repackage the same message; they can create entirely different meanings. Take the example of blood circulation, this was particularly eye-opening. One student's diary laid out the process as a timeline, while a concept map showed it as a web of relationships happening all at once. Both representations were "accurate," yet they framed the idea in such distinct ways.</p>
+                                
+                                <p>As I reflect on this, I realize I tend to rely heavily on words. Writing is great for explaining things step-by-step, but sometimes a different mode might get the message across more effectively. Whether it's a chart, a drawing, or even the way I organize my text, these elements can really influence how my audience grasps what I'm trying to say. Kress has made me rethink writing as just one of many options, instead of my default go-to.</p>
+                                
+                                <p>This leads me to some questions. How do I figure out which mode works best for a specific audience? If modes are influenced by culture, could an image that clicks with me completely confuse someone else? And how do I balance the reliability of text with the more transient nature of speech or gestures?</p>
+                                
+                                <p>All in all, this chapter has pushed me to see myself not just as a writer, but as a communicator who needs to consider which modes are most effective for my goals.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-accordion">
+                            <button class="accordion-header" onclick="toggleAccordion(1)">
+                                <span class="accordion-title">Joining Discourse Communities</span>
+                                <span class="accordion-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="discussion-text">
+                                <p>John Swales describes discourse communities as groups that share goals, use common ways of communication, and rely on specific genres and vocabulary. He also notes that these communities include both experts and newcomers, which allows knowledge to be passed on. Dan Melzer takes this idea and shows how it works in practice. His example of joining a guitar group makes the concept clear: to take part, he had to learn the language, follow the group's patterns, and contribute in ways that supported their shared purpose. He then connects this lesson to school and work, where each subject or profession has its own rules for writing.</p>
+                                
+                                <p>These ideas change how I think about writing. Before, I often saw assignments as just tasks from teachers with personal preferences. Now I see them as invitations to join the larger community of a subject, whether history, science, or business. A paper in history is not just writing for one professor, but practicing how historians build arguments and use evidence. This makes writing feel less like jumping through hoops and more like joining a bigger conversation.</p>
+                                
+                                <p>The concept also makes me think about the challenges of writing. If every community has its own expectations, then moving from one to another can feel confusing. What works in one place may not work in another. I also wonder about power. Some communities may silence new members or push them to change their voice. For example, students who write differently because of culture or language might be told their style is "wrong," even though it brings something valuable. This makes me ask how writers can balance adapting to a community with keeping their individuality.</p>
+                                
+                                <p>The most important lesson for me is that writing is both social and flexible. To succeed, I need to listen, learn, and adjust to the expectations of each group. But at the same time, I can also bring fresh ideas and perspectives that may expand the community. Writing, then, is not just about fitting in but also about finding a space where I can contribute something new.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-accordion">
+                            <button class="accordion-header" onclick="toggleAccordion(2)">
+                                <span class="accordion-title">The Power of Rhetoric and Persuasion</span>
+                                <span class="accordion-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="discussion-text">
+                                <p>"The Rhetorical Tradition" argues that rhetoric is fundamentally about how language and symbols persuade people to act or think in certain ways. The chapter traces rhetoric back to ancient Athens, where the new democracy required citizens to speak persuasively in courts and assemblies. Without kings to make decisions, Athenians needed skills to argue cases and pass laws through public speech. The Sophists taught these persuasive techniques, which worried philosophers like Plato because he thought skilled speakers could make false arguments win over truth. Aristotle disagreed and created a systematic approach to rhetoric, arguing it was a legitimate art form that used logic, credibility, and emotional appeal to persuade audiences. He classified speeches into three types based on their goals: forensic speeches for determining past events in trials, epideictic speeches for praising or blaming in the present, and deliberative speeches for arguing future actions.</p>
+                                
+                                <p>As a writer, this helps me understand that every piece I create involves persuasion. Whether I'm writing an essay, an email, or a social media post, I'm trying to convince someone of something. The chapter shows that good writing requires thinking about my specific audience and context, just like Aristotle described. I need to consider what will actually be persuasive to the people reading my work in that particular situation.</p>
+                                
+                                <p>The chapter raises important questions about ethics. If persuasion is this powerful, where is the line between convincing someone and manipulating them? When I'm crafting arguments for papers, how do I stay honest while still being effective? Another issue is how classical rhetoric applies to modern writing. Aristotle focused on speeches in public forums, but today we're writing for fragmented online audiences with short attention spans. The chapter mentions that rhetoric now includes visual symbols, advertisements, and digital media, but I wonder how much the ancient principles really translate. Does a Twitter thread follow the same rhetorical rules as a courtroom speech? The gap between ancient theory and modern practice feels significant.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-accordion">
+                            <button class="accordion-header" onclick="toggleAccordion(3)">
+                                <span class="accordion-title">Rhetoric in Higher Education Marketing</span>
+                                <span class="accordion-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="discussion-text">
+                                <p>Jemma Helen Oeppen Hill's article examines how universities in England market their fashion marketing courses using Aristotle's three types of persuasive appeals: logos (facts and data), ethos (credibility), and pathos (emotion). Her main argument is that different types of universities use different rhetorical strategies to target different groups of students, revealing how marketized higher education has become.</p>
+                                
+                                <p>The research shows that Post-92 universities rely heavily on emotional appeals and emphasize value for money, showcasing exciting experiences like study trips and on-campus activities. Meanwhile, Russell Group universities focus on their research reputation and academic credibility. Specialist fashion schools highlight their awards and global rankings. This isn't random but deliberate market segmentation based on which students each type expects to attract.</p>
+                                
+                                <p>What strikes me as a writer is how this research exposes ethical problems hiding beneath marketing strategies. Post-92 universities target students from lower income backgrounds who can't afford to relocate or take unpaid internships. They emphasize local opportunities not just to be helpful but because their students are constrained by location and social capital. This raises an uncomfortable question: are universities helping these students or reinforcing the barriers that limit their choices?</p>
+                                
+                                <p>Hill's work challenges me to think about how rhetoric shapes what audiences believe is possible. When universities emphasize employability over learning or focus on glamorous career aspects, they create unrealistic expectations. Her methodology shows I can analyze texts by identifying which appeals dominate and questioning whether persuasion crosses into manipulation.</p>
+                                
+                                <p>The biggest issue for my writing is recognizing that rhetorical choices reflect power structures. Students from wealthier backgrounds can choose universities based on quality while lower income students are limited to local options. Universities then market differently to these groups, accepting inequality as natural rather than challenging it. This makes me conscious that every writing choice either empowers or limits readers. Hill demonstrates that analyzing rhetoric isn't just academic exercise but reveals how language maintains social hierarchies.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="discussion-accordion">
+                            <button class="accordion-header" onclick="toggleAccordion(4)">
+                                <span class="accordion-title">Showing vs. Telling in Storytelling</span>
+                                <span class="accordion-icon">+</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="discussion-text">
+                                <p>In his article "Showing and Telling: The Difference that Makes a Difference," David Lewis explains the important difference between how pictures and words communicate meaning, especially in children's picturebooks. He argues that pictures show while words tell, and this difference changes how we understand stories. Many people, he says, ignore this and treat words and pictures as if they do the same thing. Lewis believes this mistake makes people miss how picturebooks really work. He uses examples from other researchers who tried to label picturebooks based on how much words and pictures "match" each other. But he points out that pictures never truly repeat what words say. Pictures show emotion, setting, and feeling, while words explain and guide our understanding.</p>
+                                
+                                <p>Lewis also gives examples from art and literature to make his point clear. He talks about Goya's drawings and how they express things that cannot be said with words alone. He also discusses Anthony Browne's Gorilla to show how pictures and words can work together to create mystery and meaning. In that story, when something magical happens, the words stop explaining and the pictures take over. This moment lets the reader imagine and feel the story instead of being told exactly what happens. Lewis says that is where the true power of storytelling comes from, when showing and telling work together but still stay different.</p>
+                                
+                                <p>As a writer, this reading makes me think about how I use language. I realize that writing is not only about telling facts or actions but also about helping readers see and feel what I mean. Sometimes silence or description can say more than direct explanation. Lewis's ideas help me understand that strong writing needs balance, between showing emotions through vivid details and telling enough to guide the reader's understanding.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Kavish Soningra. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
